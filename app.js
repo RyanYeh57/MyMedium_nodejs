@@ -9,7 +9,9 @@ const PORT = 3000;
 app.set("view engine", "ejs");
 // 靜態資源
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({extended:true}));
+// 取代 body-parser
+app.use(express.urlencoded({extended: true})); 
+app.use(express.json());
 // 路由設定
 app.use("/", pageRouter);
 app.use("/api", apiRouter);
