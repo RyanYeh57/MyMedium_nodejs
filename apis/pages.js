@@ -12,16 +12,7 @@ router.route("/index")
 .post((req, res) => {
   res.render('index.ejs')
 })
-// 註冊
-router.route("/register")
-.get((req, res) => {
-  res.render('register.ejs')
-})
-// 登入
-router.route("/log_in")
-.get((req, res) => {
-  res.render('login.ejs')
-})
+
 // 會員頁面
 router.route("/member")
 .get((req, res) => {
